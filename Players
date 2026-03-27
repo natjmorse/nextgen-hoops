@@ -1,0 +1,13 @@
+export default function Players() {
+  return (
+    <div style={{ padding: 20 }}>
+      <h1>Top Players</h1>
+
+      <div>
+        <h3>Jane Doe</h3>
+        <p>Guard | 2027</p>
+        <p>🔒 Upgrade to view full profile</p>
+      </div>
+    </div>
+  );
+}

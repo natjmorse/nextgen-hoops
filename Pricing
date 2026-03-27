@@ -1,0 +1,28 @@
+export default function Pricing() {
+  const handleCheckout = async (plan) => {
+    const res = await fetch("/api/stripe", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ plan }),
+    });
+
+    const data = await res.json();
+    window.location.href = data.url;
+  };
+
+  return (
+    <div style={{ padding: 20 }}>
+      <h1>Membership Plans</h1>
+
+      <button onClick={() => handleCheckout("gold")}>
+        Gold - $9.99/month
+      </button>
+
+      <br /><br />
+
+      <button onClick={() => handleCheckout("elite")}>
+        Elite - $29.99/month
+      </button>
+    </div>
+  );
+}

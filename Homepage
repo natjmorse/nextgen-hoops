@@ -1,0 +1,12 @@
+export default function Home() {
+  return (
+    <div style={{ background: "#0B0B0B", color: "white", minHeight: "100vh", padding: 20 }}>
+      <h1>NextGen Hoops</h1>
+      <p>Girls Basketball Recruiting Platform</p>
+
+      <a href="/pricing">
+        <button>View Memberships</button>
+      </a>
+    </div>
+  );
+}
